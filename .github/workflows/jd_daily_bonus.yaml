@@ -3,7 +3,7 @@ name: 京东每日签到
 on:
     workflow_dispatch:
     schedule:
-        - cron: "15 13,16 * * *"
+        - cron: "0 13,16 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -42,4 +42,4 @@ jobs:
                   JD_BEAN_STOP: ${{ secrets.JD_BEAN_STOP || github.event.client_payload.JD_BEAN_STOP }}
                   JD_BEAN_SIGN_STOP_NOTIFY: ${{ secrets.JD_BEAN_SIGN_STOP_NOTIFY || github.event.client_payload.JD_BEAN_SIGN_STOP_NOTIFY }}
                   JD_BEAN_SIGN_NOTIFY_SIMPLE: ${{ secrets.JD_BEAN_SIGN_NOTIFY_SIMPLE || github.event.client_payload.JD_BEAN_SIGN_NOTIFY_SIMPLE }}
-                  SYNCURL: https://github.com/gz154838009/jd_01/raw/master/jd_bean_sign.js
+                  SYNCURL: https://github.com/gz16176531/gd_01/raw/master/jd_bean_sign.js
