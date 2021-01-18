@@ -6,11 +6,11 @@ name: 消消乐
 on:
     workflow_dispatch:
     schedule:
-        - cron: "30 * * * *"
+        - cron: "20 * * * *"
     watch:
         types: [started]
     repository_dispatch:
-        types: jd_nh
+        types: jd_gyec
 
 jobs:
     build:
@@ -44,4 +44,4 @@ jobs:
                   QQ_MODE: ${{ secrets.QQ_MODE || github.event.client_payload.QQ_MODE }}
                   PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN || github.event.client_payload.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER || github.event.client_payload.PUSH_PLUS_USER }}
-                  SYNCURL: h https://raw.githubusercontent.com/gz154838009/jd_01/main/jd_gyec.js
+                  SYNCURL: https://github.com/gz154838009/gd_02/raw/master/jd_gyec.js
