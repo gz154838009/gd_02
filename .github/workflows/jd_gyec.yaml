@@ -6,7 +6,7 @@ name: 消消乐
 on:
     workflow_dispatch:
     schedule:
-        - cron: "20 * * * *"
+        - cron: "20 */2 * * *"
     watch:
         types: [started]
     repository_dispatch:
