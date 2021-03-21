@@ -1,7 +1,7 @@
 # This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
 
-name: 京喜工厂收电力
+name: 收电力
 
 on:
     workflow_dispatch:
@@ -44,4 +44,4 @@ jobs:
                   QQ_MODE: ${{ secrets.QQ_MODE || github.event.client_payload.QQ_MODE }}
                   PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN || github.event.client_payload.PUSH_PLUS_TOKEN }}
                   PUSH_PLUS_USER: ${{ secrets.PUSH_PLUS_USER || github.event.client_payload.PUSH_PLUS_USER }}
-                  SYNCURL: https://github.com/gz154838009/jd_01/raw/master/jd_dreamFactoryCollectCurrentElectricity.js
+                  SYNCURL: https://github.com/gz154838009/jd_01/raw/master/x_gc.js
