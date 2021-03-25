@@ -3,7 +3,7 @@ name: 京喜工厂
 on:
     workflow_dispatch:
     schedule:
-        - cron: "0 */6 * * *"
+        - cron: "0 */1 * * *"
     watch:
         types: [started]
     repository_dispatch:
@@ -27,7 +27,7 @@ jobs:
               run: |
                   node onlyOneExecute.js
               env:
-                  JD_COOKIE: ${{ secrets.JD_COOKIE01 || github.event.client_payload.JD_COOKIE01 }}
+                  JD_COOKIE: ${{ secrets.JD_COOKIE02 || github.event.client_payload.JD_COOKIE02 }}
                   JD_DEBUG: ${{ secrets.JD_DEBUG || github.event.client_payload.JD_DEBUG }}
                   JD_USER_AGENT: ${{ secrets.JD_USER_AGENT || github.event.client_payload.JD_USER_AGENT }}
                   PUSH_KEY: ${{ secrets.PUSH_KEY || github.event.client_payload.PUSH_KEY }}
